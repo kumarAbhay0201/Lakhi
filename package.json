@@ -1,0 +1,16 @@
+{
+  "name": "lakhi",
+  "private": true,
+  "workspaces": [
+    "frontend"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace frontend",
+    "build": "npm run build --workspace frontend",
+    "lint": "npm run lint --workspace frontend",
+    "backend:dev": "python -m uvicorn backend.app.main:app --reload --port 8000"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
