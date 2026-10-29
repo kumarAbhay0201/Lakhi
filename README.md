@@ -45,6 +45,20 @@ python -m uvicorn backend.app.main:app --reload --port 8000
 The API is available at `http://localhost:8000`; OpenAPI documentation is at
 `http://localhost:8000/docs`.
 
+### Video validation
+
+The `POST /api/v1/videos/validate` endpoint accepts one `multipart/form-data`
+field named `file`. It requires an FFmpeg installation that includes the
+`ffprobe` executable. On Windows, install FFmpeg from a trusted distribution,
+add its `bin` directory to `PATH`, or set `FFPROBE_PATH` to the full executable
+path. A Python package alone does not install FFprobe.
+
+Uploads are limited to 500 MiB and videos to 180 seconds by default. These
+limits, the FFprobe timeout, concurrency limit, and executable path can be
+changed with the `VIDEO_MAX_UPLOAD_SIZE_BYTES`,
+`VIDEO_MAX_DURATION_SECONDS`, `VIDEO_PROBE_TIMEOUT_SECONDS`,
+`VIDEO_UPLOAD_CONCURRENCY`, and `FFPROBE_PATH` settings.
+
 ### Frontend
 
 ```powershell
