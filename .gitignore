@@ -30,7 +30,7 @@ npm-debug.log*
 .idea/
 .DS_Store
 Thumbs.db
+frontend/app/Dark Theme Creator Branding Board.png
 
 # Local deployment/build output
 .vercel/
-
