@@ -75,7 +75,6 @@ export default function Home() {
             <button className="primary-button">Start creating <ArrowUpRight /></button>
             <Link className="text-button" href="/docs">See how it works <span>↓</span></Link>
           </div>
-          <div className="hero-note"><span className="note-line" /> No credit card required</div>
         </div>
 
         <div className="hero-visual" aria-label="Sublimer video workspace preview">
@@ -102,16 +101,89 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="statement" id="features" aria-label="Features">
-        <p>Less editing. More creating.</p>
-        <h2>One calm workspace for turning raw clips into content people want to watch.</h2>
+      <section className="features-section" id="features" aria-label="Features">
+        <div className="features-heading">
+          <p>Less editing. More creating.</p>
+          <h2>Everything you need to make every clip count.</h2>
+        </div>
+        <div className="feature-grid">
+          <article className="feature-card">
+            <div className="feature-card-top">
+              <span className="feature-number">01</span>
+              <span className="feature-status">Available now</span>
+            </div>
+            <div>
+              <h3>Auto-caption</h3>
+              <p>Make every word clear with accurate captions in six European languages.</p>
+            </div>
+            <div className="language-list" aria-label="Supported languages">
+              <span>English</span>
+              <span>German</span>
+              <span>French</span>
+              <span>Spanish</span>
+              <span>Italian</span>
+              <span>Dutch</span>
+            </div>
+          </article>
+
+          <article className="feature-card feature-card-coming-soon">
+            <div className="feature-card-top">
+              <span className="feature-number">02</span>
+              <span className="feature-status">Coming soon</span>
+            </div>
+            <div>
+              <h3>Raw clips to fully engaging content</h3>
+              <p>Turn raw footage into content people want to watch with motion graphics, captions, and color grading.</p>
+            </div>
+            <span className="feature-version">Planned for v2</span>
+          </article>
+        </div>
       </section>
 
       <section className="pricing-section" id="pricing" aria-label="Pricing">
         <div className="pricing-heading">
           <span className="section-kicker">01</span><h2>Pricing</h2><p>Simple plans for every stage of your creative workflow.</p>
         </div>
-        <div className="pricing-placeholder">Plans and pricing will be available here soon.</div>
+        <div className="pricing-grid">
+          <article className="pricing-card">
+            <div className="pricing-card-heading">
+              <span className="pricing-label">Free</span>
+              <p>Start creating with the essentials.</p>
+            </div>
+            <div className="pricing-price"><strong>€0</strong><span>/ month</span></div>
+            <ul className="pricing-features">
+              <li>5 auto-caption videos / month</li>
+              <li>3 v2 feature videos / month</li>
+            </ul>
+            <button className="pricing-button">Get started</button>
+          </article>
+
+          <article className="pricing-card pricing-card-featured">
+            <div className="pricing-card-heading">
+              <div className="pricing-title-row"><span className="pricing-label">Pro</span><span className="pricing-badge">Most popular</span></div>
+              <p>More room for your creative workflow.</p>
+            </div>
+            <div className="pricing-price"><strong>€29</strong><span>/ month</span></div>
+            <ul className="pricing-features">
+              <li>45 auto-caption videos / month</li>
+              <li>25 v2 feature videos / month</li>
+            </ul>
+            <button className="pricing-button">Choose Pro</button>
+          </article>
+
+          <article className="pricing-card pricing-card-coming-soon">
+            <div className="pricing-card-heading">
+              <div className="pricing-title-row"><span className="pricing-label">Editors Pro</span><span className="pricing-badge">Coming soon</span></div>
+              <p>Built for teams and high-volume editing.</p>
+            </div>
+            <div className="pricing-price"><strong>€79</strong><span>/ month</span></div>
+            <ul className="pricing-features">
+              <li>Advanced editing workflow</li>
+              <li>More coming in v2</li>
+            </ul>
+            <button className="pricing-button" disabled>Coming soon</button>
+          </article>
+        </div>
       </section>
 
       <footer><span><PlayMark /> Sublimer</span><span>Built for the next generation of creators.</span></footer>
