@@ -70,15 +70,16 @@ The frontend is available at `http://localhost:3000`.
 
 ## Vercel deployment
 
-Vercel projects are normally configured separately for each app in a monorepo:
+This repository uses Vercel Services to deploy the frontend and backend from a
+single project. The `frontend` service is public at `/`; the `backend` service
+is internal and is not exposed by a public rewrite.
 
-1. Create a Vercel project with the repository root directory set to `frontend`.
-   Vercel will detect and build Next.js automatically.
-2. Create a second Vercel project with the repository root directory set to the
-   repository root. The root `vercel.json` deploys the FastAPI app through
-   `api/index.py`.
-3. Set `NEXT_PUBLIC_API_URL` in the frontend project to the backend deployment
-   URL.
+Set the required environment variables in the Vercel project:
 
-The backend entrypoint is deliberately thin so backend code remains organized
-under `backend/app` while Vercel can discover the Python function.
+- `APP_ENV=production`
+- `BACKEND_CORS_ORIGINS` to the frontend origin when the backend is exposed
+- `NEXT_PUBLIC_API_URL` when the frontend begins calling a deployed backend
+
+The backend service remains organized under `backend/app`, while `api/index.py`
+is retained as the thin FastAPI entrypoint for deployments that target the
+backend separately.
