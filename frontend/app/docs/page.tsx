@@ -1,4 +1,5 @@
 import Link from "next/link";
+import WaitingListButton from "../components/WaitingListButton";
 
 function PlayMark() {
   return <span className="brand-logo" aria-hidden="true"><img src="/sublime_logo_icon.png" alt="" /></span>;
@@ -15,7 +16,7 @@ export default function DocsPage() {
           <Link className="nav-link active" href="/docs">Docs</Link>
           <Link className="nav-link" href="/blogs">Blogs</Link>
         </div>
-        <button className="google-button"><span className="google-g">G</span>Sign up with Google</button>
+        <WaitingListButton />
       </nav>
       <section className="content-page">
         <div className="eyebrow"><span className="eyebrow-dot" /> Sublimer guides</div>

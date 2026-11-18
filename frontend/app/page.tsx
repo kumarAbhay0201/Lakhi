@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import WaitingListButton from "./components/WaitingListButton";
 
 const navigation = [
   { label: "Features", target: "features" },
@@ -57,10 +58,7 @@ export default function Home() {
           <Link className={activeSection === "Blogs" ? "nav-link active" : "nav-link"} href="/blogs">Blogs</Link>
         </div>
 
-        <button className="google-button">
-          <span className="google-g">G</span>
-          Sign up with Google
-        </button>
+        <WaitingListButton />
       </nav>
 
       <section className="hero" id="hero">
